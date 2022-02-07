@@ -22,8 +22,6 @@ export default function App() {
               headerShown: false
             }} />
          </Stack.Navigator>
-      <View style={styles.container}>
-    </View>
     </SafeAreaProvider>
      </NavigationContainer>
    </Provider>

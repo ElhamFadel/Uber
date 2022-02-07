@@ -20,6 +20,7 @@ const data = [
 const NavOptions = () => {
     const navigation = useNavigation()
   return (
+      <>
     <FlatList
     data={data}
     horizontal
@@ -40,6 +41,7 @@ const NavOptions = () => {
     )
     }
     />
+    </>
 
   );
 };

@@ -6,11 +6,11 @@ import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplet
 import {GOOGLE_MAPS_APIKEY} from '@env';
 import {useDispatch} from "react-redux"
 import {setDestination,setOrigin} from "../slices/navSlice"
+import NavFavourites from '../components/NavFavourites';
 const HomeScreen = () => {
   const dispatch = useDispatch();
   return (
-    <SafeAreaView style={tw`bg-white h-full`}>
-     
+    <SafeAreaView >
     <View style={tw`p-5`}>
       <Image
       style={
@@ -25,6 +25,7 @@ const HomeScreen = () => {
       }}
       // you should have paid account in google
       />
+       
       <GooglePlacesAutocomplete
       placeholder='Where From ?'
       styles={{
@@ -53,6 +54,7 @@ const HomeScreen = () => {
       debounce={400}
       />
       <NavOptions />
+      <NavFavourites />
     </View>
     </SafeAreaView>
   );
